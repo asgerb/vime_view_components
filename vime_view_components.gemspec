@@ -7,11 +7,11 @@ require "vime_view_components/version"
 Gem::Specification.new do |spec|
   spec.name        = "vime_view_components"
   spec.version     = VimeViewComponents::VERSION
-  spec.authors     = ["asgerb"]
+  spec.authors     = ["Asger Behncke Jacobsen"]
   spec.email       = ["a@asgerbehnckejacobsen.dk"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of VimeViewComponents."
-  spec.description = "TODO: Description of VimeViewComponents."
+  spec.homepage    = "https://github.com/asgerb/vime_view_components"
+  spec.summary     = "ViewComponents for vime.js"
+  spec.description = "ViewComponents for vime.js"
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -25,8 +25,8 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.add_dependency "rails", "~> 6.0.3", ">= 6.0.3.3"
-  spec.add_dependency "view_component", "~> 2.13"
+  spec.add_runtime_dependency "rails", [">= 5.0.0", "< 7.0"]
+  spec.add_runtime_dependency "view_component", [">= 2.0.0", "< 3.0"]
   spec.add_dependency "dry-initializer", "~> 3.0"
   spec.add_dependency "dry-types", "~> 1.4"
   spec.add_dependency "slim", "~> 4.0"
