@@ -5,5 +5,3 @@ module VimeViewComponents
     isolate_namespace VimeViewComponents
   end
 end
-
-require "#{VimeViewComponents::Engine.root}/app/components/vime/view_components.rb"
