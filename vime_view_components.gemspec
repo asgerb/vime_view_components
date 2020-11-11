@@ -26,9 +26,12 @@ Gem::Specification.new do |spec|
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   spec.add_runtime_dependency "rails", [">= 5.0.0", "< 7.0"]
-  spec.add_runtime_dependency "view_component", [">= 2.0.0", "< 3.0"]
+
   spec.add_dependency "dry-initializer", "~> 3.0"
   spec.add_dependency "dry-types", "~> 1.4"
-  spec.add_dependency "slim", "~> 4.0"
-  spec.add_dependency "slim-rails", "~> 3.2"
+  
+  spec.add_dependency "view_component", [">= 2.0.0", "< 3.0"]
+
+  spec.add_development_dependency "minitest", "~> 5.14"
+  spec.add_development_dependency "minitest-reporters"
 end

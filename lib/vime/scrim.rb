@@ -1,7 +1,10 @@
 # frozen_string_literal: true
+
+# @see https://vimejs.com/components/ui/scrim
+
 module Vime
   class Scrim < Component
-    option :gradient, optional: true
+    option :gradient, type: Types::String.enum("down", "up").optional, optional: true
 
     def call
       content_tag "vime-scrim", content, dom_attrs
