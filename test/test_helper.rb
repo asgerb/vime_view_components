@@ -7,7 +7,6 @@ require "minitest/autorun"
 require "minitest/reporters"
 require "minitest/spec"
 
-require "view_component/test_helpers"
-require "view_component/test_case"
+require "nokogiri"
 
 require "vime_view_components"

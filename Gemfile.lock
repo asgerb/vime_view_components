@@ -172,6 +172,7 @@ PLATFORMS
 DEPENDENCIES
   minitest (~> 5.14)
   minitest-reporters
+  nokogiri
   vime_view_components!
 
 BUNDLED WITH
