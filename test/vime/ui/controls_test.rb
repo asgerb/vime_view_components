@@ -9,11 +9,12 @@ module Vime
         [
           Controls::CaptionControl,
           Controls::ControlGroup,
-          Controls::Controls,
           Controls::ControlSpacer,
+          Controls::Controls,
           Controls::DefaultControls,
           Controls::FullscreenControl,
           Controls::MuteControl,
+          Controls::PipControl,
           Controls::PlaybackControl,
           Controls::ScrubberControl,
           Controls::SettingsControl,
