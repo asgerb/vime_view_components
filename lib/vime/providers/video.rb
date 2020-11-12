@@ -12,7 +12,7 @@ module Vime
       option :preload, type: Types::String.enum("", "auto", "metadata", "none").optional, default: -> { "metadata" }
 
       def call
-        tag "vime-video", dom_attrs
+        content_tag "vime-video", content, dom_attrs
       end
 
       def dom_attrs
