@@ -29,6 +29,11 @@ require "vime/ui/controls/scrubber_control"
 require "vime/ui/controls/settings_control"
 require "vime/ui/controls/volume_control"
 
+require "vime/ui/time/current_time"
+require "vime/ui/time/end_time"
+require "vime/ui/time/time"
+require "vime/ui/time/time_progress"
+
 require "vime/ui/captions"
 require "vime/ui/click_to_play"
 require "vime/ui/dbl_click_fullscreen"
