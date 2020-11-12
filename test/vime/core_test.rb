@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "test_helper"
 
 module Vime
@@ -6,7 +8,7 @@ module Vime
       [
         Core::Player,
       ].each do |component_class|
-        doc = Nokogiri::HTML::fragment(component_class.new.call)
+        doc = Nokogiri::HTML.fragment(component_class.new.call)
         assert_predicate doc, :present?
       end
     end
