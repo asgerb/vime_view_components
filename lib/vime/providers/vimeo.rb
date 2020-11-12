@@ -13,7 +13,7 @@ module Vime
       option :video_id, type: Types::String
 
       def call
-        tag "vime-vimeo", dom_attrs
+        tag "vime-vimeo", process_attrs(dom_attrs)
       end
 
       def dom_attrs
@@ -24,7 +24,7 @@ module Vime
           portrait: portrait,
           poster: poster,
           video_id: video_id,
-        }).deep_transform_keys! { |key| key.to_s.dasherize }
+        })
       end
     end
   end

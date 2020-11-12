@@ -6,12 +6,7 @@ module Vime
   module Ui
     class LiveIndicator < Component
       def call
-        tag "vime-live-indicator", dom_attrs
-      end
-
-      def dom_attrs
-        super.merge({
-        }).deep_transform_keys! { |key| key.to_s.dasherize }
+        tag "vime-live-indicator", process_attrs(dom_attrs)
       end
     end
   end

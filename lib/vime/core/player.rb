@@ -24,7 +24,7 @@ module Vime
       option :volume, type: Types::Integer, default: -> { 50 }
 
       def call
-        content_tag "vime-player", content, dom_attrs
+        content_tag "vime-player", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs
@@ -46,7 +46,7 @@ module Vime
           playsinline: playsinline,
           theme: theme,
           volume: volume,
-        }).deep_transform_keys! { |key| key.to_s.dasherize }
+        })
       end
     end
   end

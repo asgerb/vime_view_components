@@ -9,14 +9,14 @@ module Vime
       option :hidden, type: Types::Bool, default: -> { false }
 
       def call
-        tag "vime-captions", dom_attrs
+        tag "vime-captions", process_attrs(dom_attrs)
       end
 
       def dom_attrs
         super.merge({
           controls_height: controls_height,
           hidden: hidden,
-        }).deep_transform_keys! { |key| key.to_s.dasherize }
+        })
       end
     end
   end

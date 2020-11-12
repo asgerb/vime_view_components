@@ -13,7 +13,7 @@ module Vime
       option :value_text, type: Types::String, optional: true
 
       def call
-        tag "vime-slider", dom_attrs
+        tag "vime-slider", process_attrs(dom_attrs)
       end
 
       def dom_attrs
@@ -24,7 +24,7 @@ module Vime
           step: step,
           value: value,
           value_text: value_text,
-        }).deep_transform_keys! { |key| key.to_s.dasherize }
+        })
       end
     end
   end

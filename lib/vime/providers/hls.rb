@@ -14,7 +14,7 @@ module Vime
       option :version, type: Types::String, default: -> { "latest" }
 
       def call
-        content_tag "vime-hls", content, dom_attrs
+        content_tag "vime-hls", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs
@@ -26,7 +26,7 @@ module Vime
           poster: poster,
           preload: preload,
           version: version,
-        }.deep_transform_keys! { |key| key.to_s.dasherize }
+        }
       end
     end
   end

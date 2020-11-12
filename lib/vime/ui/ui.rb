@@ -6,12 +6,7 @@ module Vime
   module Ui
     class Ui < Component
       def call
-        content_tag "vime-ui", content, dom_attrs
-      end
-
-      def dom_attrs
-        super.merge({
-        }).deep_transform_keys! { |key| key.to_s.dasherize }
+        content_tag "vime-ui", content, process_attrs(dom_attrs)
       end
     end
   end

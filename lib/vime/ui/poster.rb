@@ -8,13 +8,13 @@ module Vime
       option :fit, type: Types::String.enum("contain", "cover", "fill", "none", "scale-down"), default: -> { "cover" }
 
       def call
-        tag "vime-poster", dom_attrs
+        tag "vime-poster", process_attrs(dom_attrs)
       end
 
       def dom_attrs
         super.merge({
           fit: fit
-        }).deep_transform_keys! { |key| key.to_s.dasherize }
+        })
       end
     end
   end

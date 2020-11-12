@@ -8,13 +8,13 @@ module Vime
       option :effect, type: Types::String.enum("none", "sheen"), default: -> { "sheen" }
 
       def call
-        tag "vime-skeleton", dom_attrs
+        tag "vime-skeleton", process_attrs(dom_attrs)
       end
 
       def dom_attrs
         super.merge({
           effect: effect
-        }).deep_transform_keys! { |key| key.to_s.dasherize }
+        })
       end
     end
   end

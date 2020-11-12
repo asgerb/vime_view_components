@@ -11,7 +11,7 @@ module Vime
       option :position, type: Types::String.enum("top", "bottom"), default: -> { "top" }
 
       def call
-        content_tag "vime-tooltip", content, dom_attrs
+        content_tag "vime-tooltip", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs
@@ -20,7 +20,7 @@ module Vime
           direction: direction,
           hidden: hidden,
           position: position,
-        }).deep_transform_keys! { |key| key.to_s.dasherize }
+        })
       end
     end
   end

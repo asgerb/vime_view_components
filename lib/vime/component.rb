@@ -21,5 +21,13 @@ module Vime
         style: style,
       }
     end
+
+    private
+      def process_attrs(attrs)
+        attrs
+          .deep_transform_keys!(&:to_s)
+          .deep_transform_keys!(&:dasherize)
+          .reject { |_, v| v.nil? }
+      end
   end
 end

@@ -10,7 +10,7 @@ module Vime
       option :preload, type: Types::String.enum("", "auto", "metadata", "none"), default: -> { "metadata" }
 
       def call
-        content_tag "vime-audio", content, dom_attrs
+        content_tag "vime-audio", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs
@@ -18,7 +18,7 @@ module Vime
           cross_origin: cross_origin,
           media_title: media_title,
           preload: preload,
-        }.deep_transform_keys! { |key| key.to_s.dasherize }
+        }
       end
     end
   end

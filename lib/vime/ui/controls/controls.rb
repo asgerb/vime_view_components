@@ -19,7 +19,7 @@ module Vime
         option :wait_for_playback_start, type: Types::Bool, default: -> { false }
 
         def call
-          content_tag "vime-controls", content, dom_attrs
+          content_tag "vime-controls", content, process_attrs(dom_attrs)
         end
 
         def dom_attrs
@@ -35,7 +35,7 @@ module Vime
             justify: justify,
             pin: pin,
             wait_for_playback_start: wait_for_playback_start
-          }).deep_transform_keys! { |key| key.to_s.dasherize }
+          })
         end
       end
     end

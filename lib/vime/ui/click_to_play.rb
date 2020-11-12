@@ -8,13 +8,13 @@ module Vime
       option :use_on_mobile, type: Types::Bool, default: -> { false }
 
       def call
-        tag "vime-click-to-play", dom_attrs
+        tag "vime-click-to-play", process_attrs(dom_attrs)
       end
 
       def dom_attrs
         super.merge({
           use_on_mobile: use_on_mobile,
-        }).deep_transform_keys! { |key| key.to_s.dasherize }
+        })
       end
     end
   end

@@ -14,7 +14,7 @@ module Vime
         option :tooltip_position, type: Types::String.enum("bottom", "top"), default: -> { "top" }
 
         def call
-          tag "vime-fullscreen-control", dom_attrs
+          tag "vime-fullscreen-control", process_attrs(dom_attrs)
         end
 
         def dom_attrs
@@ -25,7 +25,7 @@ module Vime
             keys: keys,
             tooltip_direction: tooltip_direction,
             tooltip_position: tooltip_position,
-          }).deep_transform_keys! { |key| key.to_s.dasherize }
+          })
         end
       end
     end

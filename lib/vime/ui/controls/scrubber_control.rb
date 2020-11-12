@@ -11,7 +11,7 @@ module Vime
         option :no_keyboard, type: Types::Bool, default: -> { false }
 
         def call
-          tag "vime-scrubber-control", dom_attrs
+          tag "vime-scrubber-control", process_attrs(dom_attrs)
         end
 
         def dom_attrs
@@ -19,7 +19,7 @@ module Vime
             always_show_hours: always_show_hours,
             hide_tooltip: hide_tooltip,
             no_keyboard: no_keyboard,
-          }.deep_transform_keys! { |key| key.to_s.dasherize }
+          }
         end
       end
     end

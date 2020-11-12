@@ -8,13 +8,13 @@ module Vime
       option :href, type: Types::String, optional: true
 
       def call
-        content_tag "vime-icon", content, dom_attrs
+        content_tag "vime-icon", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs
         super.merge({
           href: href,
-        }).deep_transform_keys! { |key| key.to_s.dasherize }
+        })
       end
     end
   end

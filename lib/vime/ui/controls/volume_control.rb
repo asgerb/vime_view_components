@@ -16,7 +16,7 @@ module Vime
         option :tooltip_position, type: Types::String.enum("bottom", "top"), default: -> { "top" }
 
         def call
-          tag "vime-volume-control", dom_attrs
+          tag "vime-volume-control", process_attrs(dom_attrs)
         end
 
         def dom_attrs
@@ -29,7 +29,7 @@ module Vime
             no_keyboard: no_keyboard,
             tooltip_direction: tooltip_direction,
             tooltip_position: tooltip_position,
-          }).deep_transform_keys! { |key| key.to_s.dasherize }
+          })
         end
       end
     end
