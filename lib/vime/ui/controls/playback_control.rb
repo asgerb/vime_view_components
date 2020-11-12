@@ -18,7 +18,7 @@ module Vime
         end
 
         def dom_attrs
-          super.merge({{
+          super.merge({
             hide_tooltip: hide_tooltip,
             keys: keys,
             pause_icon: pause_icon,

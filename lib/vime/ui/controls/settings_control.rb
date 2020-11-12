@@ -17,7 +17,7 @@ module Vime
         end
 
         def dom_attrs
-          super.merge({{
+          super.merge({
             expanded: expanded,
             icon: icon,
             menu: menu,

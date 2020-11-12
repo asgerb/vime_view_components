@@ -16,7 +16,7 @@ module Vime
       end
 
       def dom_attrs
-        super.merge({{
+        super.merge({
           controls_list: controls_list,
           cross_origin: cross_origin,
           media_title: media_title,

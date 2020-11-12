@@ -15,7 +15,7 @@ module Vime
         end
 
         def dom_attrs
-          super.merge({{
+          super.merge({
             always_show_hours: always_show_hours,
             hide_tooltip: hide_tooltip,
             no_keyboard: no_keyboard,
