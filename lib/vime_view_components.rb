@@ -17,6 +17,7 @@ require "vime/providers/youtube"
 
 require "vime/ui/controls/caption_control"
 require "vime/ui/controls/control_group"
+require "vime/ui/controls/control_spacer"
 require "vime/ui/controls/controls"
 require "vime/ui/controls/fullscreen_control"
 require "vime/ui/controls/mute_control"

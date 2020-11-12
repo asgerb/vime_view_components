@@ -10,6 +10,7 @@ module Vime
           Controls::CaptionControl,
           Controls::ControlGroup,
           Controls::Controls,
+          Controls::ControlSpacer,
           Controls::FullscreenControl,
           Controls::MuteControl,
           Controls::PlaybackControl,
