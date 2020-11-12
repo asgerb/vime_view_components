@@ -18,7 +18,7 @@ module Vime
       end
 
       def dom_attrs
-        {
+        super.merge({{
           config: config,
           controls_list: controls_list,
           cross_origin: cross_origin,
@@ -26,7 +26,7 @@ module Vime
           poster: poster,
           preload: preload,
           version: version,
-        }
+        })
       end
     end
   end

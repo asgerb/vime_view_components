@@ -17,13 +17,13 @@ module Vime
         end
 
         def dom_attrs
-          {
+          super.merge({{
             expanded: expanded,
             icon: icon,
             menu: menu,
             tooltip_direction: tooltip_direction,
             tooltip_position: tooltip_position,
-          }
+          })
         end
       end
     end

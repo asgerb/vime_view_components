@@ -18,14 +18,14 @@ module Vime
         end
 
         def dom_attrs
-          {
+          super.merge({{
             hide_tooltip: hide_tooltip,
             keys: keys,
             pause_icon: pause_icon,
             play_icon: play_icon,
             tooltip_direction: tooltip_direction,
             tooltip_position: tooltip_position,
-          }
+          })
         end
       end
     end

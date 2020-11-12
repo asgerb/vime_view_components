@@ -14,11 +14,11 @@ module Vime
       end
 
       def dom_attrs
-        {
+        super.merge({
           cross_origin: cross_origin,
           media_title: media_title,
           preload: preload,
-        }
+        })
       end
     end
   end
