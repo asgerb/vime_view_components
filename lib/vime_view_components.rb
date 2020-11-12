@@ -13,6 +13,7 @@ require "vime/providers/audio"
 require "vime/providers/hls"
 require "vime/providers/video"
 require "vime/providers/vimeo"
+require "vime/providers/youtube"
 
 require "vime/ui/controls/caption_control"
 require "vime/ui/controls/control_group"
