@@ -1,23 +1,31 @@
 # frozen_string_literal: true
 
-# @see https://vimejs.com/components/providers/audio
+# @see https://vimejs.com/components/providers/hls
 
 module Vime
   module Providers
-    class Audio < Component
+    class Hls < Component
+      option :config, type: Types::Any, optional: true
+      option :controls_list, type: Types::String, optional: true
       option :cross_origin, type: Types::String.enum("", "anonymous", "use-credentials"), optional: true
       option :media_title, type: Types::String, optional: true
+      option :poster, type: Types::String, optional: true
       option :preload, type: Types::String.enum("", "auto", "metadata", "none"), default: -> { "metadata" }
+      option :version, type: Types::String, default: -> { "latest" }
 
       def call
-        content_tag "vime-audio", content, dom_attrs
+        content_tag "vime-hls", content, dom_attrs
       end
 
       def dom_attrs
         {
+          config: config,
+          controls_list: controls_list,
           cross_origin: cross_origin,
           media_title: media_title,
+          poster: poster,
           preload: preload,
+          version: version,
         }.deep_transform_keys! { |key| key.to_s.dasherize }
       end
     end
