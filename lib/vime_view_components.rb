@@ -9,6 +9,7 @@ require "vime/component"
 
 require "vime/core/player"
 
+require "vime/providers/audio"
 require "vime/providers/video"
 require "vime/providers/vimeo"
 
