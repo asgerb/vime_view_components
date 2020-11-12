@@ -11,6 +11,7 @@ module Vime
           Controls::ControlGroup,
           Controls::Controls,
           Controls::ControlSpacer,
+          Controls::DefaultControls,
           Controls::FullscreenControl,
           Controls::MuteControl,
           Controls::PlaybackControl,
