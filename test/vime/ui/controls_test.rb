@@ -22,6 +22,11 @@ module Vime
           assert_predicate doc, :present?
         end
       end
+
+      test "Control component" do
+        doc = Nokogiri::HTML.fragment(Controls::Control.new(label: "Label").call)
+        assert_predicate doc, :present?
+      end
     end
   end
 end

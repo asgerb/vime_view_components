@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# @see https://vimejs.com/components/ui/controls/controls#properties
+# @see https://vimejs.com/components/ui/controls/controls
 
 module Vime
   module Ui
