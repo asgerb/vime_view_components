@@ -9,8 +9,8 @@ require "vime_view_components/version"
 Gem::Specification.new do |spec|
   spec.name        = "vime_view_components"
   spec.version     = VimeViewComponents::VERSION
-  spec.authors     = ["Asger Behncke Jacobsen"]
-  spec.email       = ["a@asgerbehnckejacobsen.dk"]
+  spec.authors     = ["Asger Behncke Jacobsen", "Tomas Celizna"]
+  spec.email       = ["a@asgerbehnckejacobsen.dk", "mail@tomascelizna.com"]
   spec.homepage    = "https://github.com/asgerb/vime_view_components"
   spec.summary     = "ViewComponents for vime.js"
   spec.description = "ViewComponents for vime.js"
