@@ -6,6 +6,7 @@ module Vime
   class CoreTest < ActiveSupport::TestCase
     test "render components" do
       [
+        Core::Embed,
         Core::Player,
       ].each do |component_class|
         doc = Nokogiri::HTML.fragment(component_class.new.call)
