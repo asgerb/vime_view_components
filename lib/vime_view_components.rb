@@ -7,8 +7,8 @@ require "view_component"
 
 require "vime/component"
 
-require "vime/core/player"
 require "vime/core/embed"
+require "vime/core/player"
 require "vime/core/playground"
 
 require "vime/providers/audio"
