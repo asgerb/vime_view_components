@@ -13,7 +13,7 @@ module Vime
       end
     end
 
-    test "Vimeo component" do
+    test "Embed component" do
       doc = Nokogiri::HTML.fragment(Core::Embed.new(embed_src: "https://youtu.be/9P-ujzCuCuo").call)
       assert_predicate doc, :present?
     end
