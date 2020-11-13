@@ -15,6 +15,11 @@ module Vime
       end
     end
 
+    test "Dailymotion component" do
+      doc = Nokogiri::HTML.fragment(Providers::Dailymotion.new(video_id: "12345").call)
+      assert_predicate doc, :present?
+    end
+
     test "Vimeo component" do
       doc = Nokogiri::HTML.fragment(Providers::Vimeo.new(video_id: "12345").call)
       assert_predicate doc, :present?
