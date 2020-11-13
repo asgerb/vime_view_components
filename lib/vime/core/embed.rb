@@ -6,9 +6,9 @@ module Vime
   module Core
     class Embed < Component
       option :embed_src, type: Types::String
-      option :media_title, type: Types::String
-      option :origin, type: Types::String
-      option :params, type: Types::String
+      option :media_title, type: Types::String, optional: true
+      option :origin, type: Types::String, optional: true
+      option :params, type: Types::String, optional: true
 
       def call
         content_tag "vime-embed", content, process_attrs(dom_attrs)
