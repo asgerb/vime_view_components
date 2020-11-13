@@ -9,6 +9,7 @@ require "vime/component"
 
 require "vime/core/player"
 require "vime/core/embed"
+require "vime/core/playground"
 
 require "vime/providers/audio"
 require "vime/providers/hls"
