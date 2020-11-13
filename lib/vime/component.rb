@@ -8,6 +8,11 @@ module Vime
 
     module Types
       include Dry.Types()
+
+      CrossOrigin = String.enum("", "anonymous", "use-credentials")
+      Preload = String.enum("", "auto", "metadata", "none")
+      TooltipDirection = Types::String.enum("left", "right")
+      TooltipPosition = Types::String.enum("bottom", "top")
     end
 
     option :class, type: Types::Array.of(Types::String).optional, optional: true, as: :classes

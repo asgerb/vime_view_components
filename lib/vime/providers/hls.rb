@@ -7,10 +7,10 @@ module Vime
     class Hls < Component
       option :config, type: Types::Any, optional: true
       option :controls_list, type: Types::String, optional: true
-      option :cross_origin, type: Types::String.enum("", "anonymous", "use-credentials"), optional: true
+      option :cross_origin, type: Types::CrossOrigin, optional: true
       option :media_title, type: Types::String, optional: true
       option :poster, type: Types::String, optional: true
-      option :preload, type: Types::String.enum("", "auto", "metadata", "none"), default: -> { "metadata" }
+      option :preload, type: Types::Preload, default: -> { "metadata" }
       option :version, type: Types::String, default: -> { "latest" }
 
       def call

@@ -12,8 +12,8 @@ module Vime
         option :mute_keys, type: Types::String, default: -> { "m" }
         option :muted_icon, type: Types::String, default: -> { "#vime-volume-mute" }
         option :no_keyboard, type: Types::Bool, default: -> { false }
-        option :tooltip_direction, type: Types::String.enum("left", "right"), optional: true
-        option :tooltip_position, type: Types::String.enum("bottom", "top"), default: -> { "top" }
+        option :tooltip_direction, type: Types::TooltipDirection, optional: true
+        option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
 
         def call
           tag "vime-volume-control", process_attrs(dom_attrs)

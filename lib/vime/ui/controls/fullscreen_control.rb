@@ -10,8 +10,8 @@ module Vime
         option :exit_icon, type: Types::String, default: -> { "#vime-exit-fullscreen" }
         option :hide_tooltip, type: Types::Bool, default: -> { false }
         option :keys, type: Types::String, optional: true, default: -> { "f" }
-        option :tooltip_direction, type: Types::String.enum("left", "right"), optional: true
-        option :tooltip_position, type: Types::String.enum("bottom", "top"), default: -> { "top" }
+        option :tooltip_direction, type: Types::TooltipDirection, optional: true
+        option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
 
         def call
           tag "vime-fullscreen-control", process_attrs(dom_attrs)

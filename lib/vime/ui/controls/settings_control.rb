@@ -9,8 +9,8 @@ module Vime
         option :expanded, type: Types::Bool, default: -> { false }
         option :icon, type: Types::String, default: -> { "#vime-settings" }
         option :menu, type: Types::String, optional: true
-        option :tooltip_direction, type: Types::String.enum("left", "right"), optional: true
-        option :tooltip_position, type: Types::String.enum("bottom", "top"), default: -> { "top" }
+        option :tooltip_direction, type: Types::TooltipDirection, optional: true
+        option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
 
         def call
           tag "vime-settings-control", process_attrs(dom_attrs)

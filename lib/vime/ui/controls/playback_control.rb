@@ -10,8 +10,8 @@ module Vime
         option :keys, type: Types::String.optional, default: -> { "k" }
         option :play_icon, type: Types::String, default: -> { "#vime-play" }
         option :pause_icon, type: Types::String, default: -> { "#vime-pause" }
-        option :tooltip_direction, type: Types::String.enum("left", "right"), optional: true
-        option :tooltip_position, type: Types::String.enum("bottom", "top"), default: -> { "top" }
+        option :tooltip_direction, type: Types::TooltipDirection, optional: true
+        option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
 
         def call
           tag "vime-playback-control", process_attrs(dom_attrs)
