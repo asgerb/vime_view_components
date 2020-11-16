@@ -1,5 +1,6 @@
 # vime_view_components
 
+[![Gem Version](https://badge.fury.io/rb/vime_view_components.svg)](https://rubygems.org/gems/vime_view_components)
 ![Ruby](https://github.com/asgerb/vime_view_components/workflows/Ruby/badge.svg)
 
 ViewComponents for vime.js
