@@ -13,6 +13,8 @@ require "vime/core/playground"
 
 require "vime/providers/audio"
 require "vime/providers/dailymotion"
+require "vime/providers/dash"
+require "vime/providers/file"
 require "vime/providers/hls"
 require "vime/providers/video"
 require "vime/providers/vimeo"

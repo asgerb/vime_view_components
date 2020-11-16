@@ -7,6 +7,7 @@ module Vime
     test "render components" do
       [
         Providers::Audio,
+        Providers::File,
         Providers::Hls,
         Providers::Video,
       ].each do |component_class|
@@ -17,6 +18,11 @@ module Vime
 
     test "Dailymotion component" do
       doc = Nokogiri::HTML.fragment(Providers::Dailymotion.new(video_id: "12345").call)
+      assert_predicate doc, :present?
+    end
+
+    test "Dash component" do
+      doc = Nokogiri::HTML.fragment(Providers::Dash.new(src: "manifest.mpd").call)
       assert_predicate doc, :present?
     end
 
