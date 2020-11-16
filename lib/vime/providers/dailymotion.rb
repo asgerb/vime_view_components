@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# @see https://vimejs.com/components/providers/youtube
+# @see https://vimejs.com/components/providers/dailymotion
 
 module Vime
   module Providers
