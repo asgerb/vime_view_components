@@ -15,7 +15,7 @@ module Vime
         option :hide_on_mouse_leave, type: Types::Bool, default: -> { false }
         option :hide_when_paused, type: Types::Bool, default: -> { false }
         option :justify, type: Types::String.enum("center", "end", "space-around", "space-between", "space-evenly", "start"), default: -> { "start" }
-        option :pin, type: Types::Pin, default: -> { "bottomLeft" }
+        option :pin, type: Types::String.enum("bottomLeft", "bottomRight", "center", "topLeft", "topRight"), default: -> { "bottomLeft" }
         option :wait_for_playback_start, type: Types::Bool, default: -> { false }
 
         def call
