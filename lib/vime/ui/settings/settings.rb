@@ -8,7 +8,7 @@ module Vime
       class Settings < Component
         option :active, type: Types::Bool, default: -> { false }
         option :controls_height, type: Types::Integer, default: -> { 0 }
-        option :pin, type: Types::Pin, default: -> { "bottomRight" }
+        option :pin, type: Types::String.enum("bottomLeft", "bottomRight", "topLeft", "topRight"), default: -> { "bottomRight" }
 
         def call
           content_tag "vime-settings", content, process_attrs(dom_attrs)

@@ -10,7 +10,6 @@ module Vime
       include Dry.Types()
 
       CrossOrigin = String.enum("", "anonymous", "use-credentials")
-      Pin = String.enum("bottomLeft", "bottomRight", "topLeft", "topRight")
       Preload = String.enum("", "auto", "metadata", "none")
       TooltipDirection = String.enum("left", "right")
       TooltipPosition = String.enum("bottom", "top")
