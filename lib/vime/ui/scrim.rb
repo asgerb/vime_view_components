@@ -8,7 +8,7 @@ module Vime
       option :gradient, type: Types::String.enum("down", "up").optional, optional: true
 
       def call
-        content_tag "vime-scrim", content, process_attrs(dom_attrs)
+        content_tag "vm-scrim", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs

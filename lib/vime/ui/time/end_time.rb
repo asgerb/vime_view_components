@@ -9,7 +9,7 @@ module Vime
         option :always_show_hours, type: Types::Bool, default: -> { false }
 
         def call
-          tag "vime-end-time", process_attrs(dom_attrs)
+          tag "vm-end-time", process_attrs(dom_attrs)
         end
 
         def dom_attrs

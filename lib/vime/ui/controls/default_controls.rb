@@ -12,7 +12,7 @@ module Vime
         option :wait_for_playback_start, type: Types::Bool, default: -> { false }
 
         def call
-          tag "vime-default-controls", process_attrs(dom_attrs)
+          tag "vm-default-controls", process_attrs(dom_attrs)
         end
 
         def dom_attrs

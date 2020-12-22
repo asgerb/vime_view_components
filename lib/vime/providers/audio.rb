@@ -10,7 +10,7 @@ module Vime
       option :preload, type: Types::Preload, default: -> { "metadata" }
 
       def call
-        content_tag "vime-audio", content, process_attrs(dom_attrs)
+        content_tag "vm-audio", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs

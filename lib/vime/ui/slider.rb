@@ -13,7 +13,7 @@ module Vime
       option :value_text, type: Types::String, optional: true
 
       def call
-        tag "vime-slider", process_attrs(dom_attrs)
+        tag "vm-slider", process_attrs(dom_attrs)
       end
 
       def dom_attrs

@@ -24,7 +24,7 @@ module Vime
       option :volume, type: Types::Integer, default: -> { 50 }
 
       def call
-        content_tag "vime-player", content, process_attrs(dom_attrs)
+        content_tag "vm-player", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs

@@ -12,7 +12,7 @@ module Vime
         option :label, type: Types::String
 
         def call
-          content_tag "vime-submenu", content, process_attrs(dom_attrs)
+          content_tag "vm-submenu", content, process_attrs(dom_attrs)
         end
 
         def dom_attrs

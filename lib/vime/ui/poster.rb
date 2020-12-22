@@ -8,7 +8,7 @@ module Vime
       option :fit, type: Types::String.enum("contain", "cover", "fill", "none", "scale-down"), default: -> { "cover" }
 
       def call
-        tag "vime-poster", process_attrs(dom_attrs)
+        tag "vm-poster", process_attrs(dom_attrs)
       end
 
       def dom_attrs

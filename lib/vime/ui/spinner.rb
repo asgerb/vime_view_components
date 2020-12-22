@@ -6,7 +6,7 @@ module Vime
   module Ui
     class Spinner < Component
       def call
-        tag "vime-spinner", process_attrs(dom_attrs)
+        tag "vm-spinner", process_attrs(dom_attrs)
       end
     end
   end

@@ -14,7 +14,7 @@ module Vime
         option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
 
         def call
-          tag "vime-playback-control", process_attrs(dom_attrs)
+          tag "vm-playback-control", process_attrs(dom_attrs)
         end
 
         def dom_attrs

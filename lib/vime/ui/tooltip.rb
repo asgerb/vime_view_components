@@ -11,7 +11,7 @@ module Vime
       option :position, type: Types::String.enum("top", "bottom"), default: -> { "top" }
 
       def call
-        content_tag "vime-tooltip", content, process_attrs(dom_attrs)
+        content_tag "vm-tooltip", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs

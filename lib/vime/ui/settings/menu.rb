@@ -11,7 +11,7 @@ module Vime
         option :identifier, type: Types::String
 
         def call
-          content_tag "vime-menu", content, process_attrs(dom_attrs)
+          content_tag "vm-menu", content, process_attrs(dom_attrs)
         end
 
         def dom_attrs

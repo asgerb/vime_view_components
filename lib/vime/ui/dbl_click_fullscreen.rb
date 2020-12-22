@@ -8,7 +8,7 @@ module Vime
       option :use_on_mobile, type: Types::Bool, default: -> { false }
 
       def call
-        tag "vime-dbl-click-fullscreen", process_attrs(dom_attrs)
+        tag "vm-dbl-click-fullscreen", process_attrs(dom_attrs)
       end
 
       def dom_attrs

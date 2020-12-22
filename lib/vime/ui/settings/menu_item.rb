@@ -17,7 +17,7 @@ module Vime
         option :menu, type: Types::String, optional: true
 
         def call
-          tag "vime-menu-item", process_attrs(dom_attrs)
+          tag "vm-menu-item", process_attrs(dom_attrs)
         end
 
         def dom_attrs

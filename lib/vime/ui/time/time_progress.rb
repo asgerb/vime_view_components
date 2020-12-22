@@ -10,7 +10,7 @@ module Vime
         option :separator, type: Types::String, default: -> { "/" }
 
         def call
-          tag "vime-time-progress", process_attrs(dom_attrs)
+          tag "vm-time-progress", process_attrs(dom_attrs)
         end
 
         def dom_attrs
