@@ -11,7 +11,7 @@ module Vime
         Ui::DblClickFullscreen,
         Ui::DefaultUi,
         Ui::Icon,
-        Ui::Icons,
+        Ui::IconLibrary,
         Ui::LiveIndicator,
         Ui::Poster,
         Ui::Scrim,

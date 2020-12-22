@@ -14,7 +14,7 @@ module Vime
       option :version, type: Types::String, default: -> { "latest" }
 
       def call
-        content_tag "vime-hls", content, process_attrs(dom_attrs)
+        content_tag "vm-hls", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs

@@ -5,15 +5,15 @@
 module Vime
   module Ui
     class Icon < Component
-      option :href, type: Types::String, optional: true
+      option :src, type: Types::String, optional: true
 
       def call
-        content_tag "vime-icon", content, process_attrs(dom_attrs)
+        content_tag "vm-icon", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs
         super.merge({
-          href: href,
+          src: src,
         })
       end
     end

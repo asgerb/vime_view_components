@@ -12,7 +12,7 @@ module Vime
       option :theme, type: Types::String.enum("", "dark", "light"), default: -> { "" }
 
       def call
-        content_tag "vime-playground", content, process_attrs(dom_attrs)
+        content_tag "vm-playground", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs

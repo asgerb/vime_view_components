@@ -9,7 +9,7 @@ module Vime
         option :space, type: Types::String.enum("both", "bottom", "none", "top"), default: -> { "none" }
 
         def call
-          content_tag "vime-control-group", content, process_attrs(dom_attrs)
+          content_tag "vm-control-group", content, process_attrs(dom_attrs)
         end
 
         def dom_attrs

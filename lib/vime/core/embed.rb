@@ -11,7 +11,7 @@ module Vime
       option :params, type: Types::String, optional: true
 
       def call
-        content_tag "vime-embed", content, process_attrs(dom_attrs)
+        content_tag "vm-embed", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs

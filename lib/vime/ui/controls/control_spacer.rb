@@ -7,7 +7,7 @@ module Vime
     module Controls
       class ControlSpacer < Component
         def call
-          tag "vime-control-spacer", process_attrs(dom_attrs)
+          tag "vm-control-spacer", process_attrs(dom_attrs)
         end
       end
     end

@@ -16,7 +16,7 @@ module Vime
         option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
 
         def call
-          tag "vime-volume-control", process_attrs(dom_attrs)
+          tag "vm-volume-control", process_attrs(dom_attrs)
         end
 
         def dom_attrs

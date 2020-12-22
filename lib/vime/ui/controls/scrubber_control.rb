@@ -11,7 +11,7 @@ module Vime
         option :no_keyboard, type: Types::Bool, default: -> { false }
 
         def call
-          tag "vime-scrubber-control", process_attrs(dom_attrs)
+          tag "vm-scrubber-control", process_attrs(dom_attrs)
         end
 
         def dom_attrs

@@ -15,7 +15,7 @@ module Vime
         option :pressed, type: Types::Bool, optional: true
 
         def call
-          content_tag "vime-control", content, process_attrs(dom_attrs)
+          content_tag "vm-control", content, process_attrs(dom_attrs)
         end
 
         def dom_attrs

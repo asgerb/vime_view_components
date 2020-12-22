@@ -11,7 +11,7 @@ module Vime
         option :seconds, type: Types::Integer, default: -> { 0 }
 
         def call
-          tag "vime-time", process_attrs(dom_attrs)
+          tag "vm-time", process_attrs(dom_attrs)
         end
 
         def dom_attrs

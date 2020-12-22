@@ -15,7 +15,7 @@ module Vime
         option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
 
         def call
-          tag "vime-mute-control", process_attrs(dom_attrs)
+          tag "vm-mute-control", process_attrs(dom_attrs)
         end
 
         def dom_attrs

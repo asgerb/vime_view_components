@@ -16,7 +16,7 @@ module Vime
       option :no_spinner, type: Types::Bool, default: -> { false }
 
       def call
-        content_tag "vime-default-ui", content, process_attrs(dom_attrs)
+        content_tag "vm-default-ui", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs

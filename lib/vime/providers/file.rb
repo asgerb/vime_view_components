@@ -16,7 +16,7 @@ module Vime
       option :view_type, type: Types::String, optional: true
 
       def call
-        content_tag "vime-file", content, process_attrs(dom_attrs)
+        content_tag "vm-file", content, process_attrs(dom_attrs)
       end
 
       def dom_attrs
