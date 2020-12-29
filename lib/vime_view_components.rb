@@ -15,7 +15,7 @@ module Vime
 end
 
 Zeitwerk::Loader.new.tap do |loader|
-  loader.push_dir("#{__dir__}/Vime", namespace: Vime)
+  loader.push_dir("#{__dir__}/vime", namespace: Vime)
   loader.setup
   loader.eager_load
 end
