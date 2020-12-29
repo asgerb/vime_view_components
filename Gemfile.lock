@@ -5,6 +5,7 @@ PATH
       dry-initializer (~> 3.0)
       dry-types (~> 1.4)
       view_component (>= 2.0.0, < 3.0)
+      zeitwerk (~> 2.4)
 
 GEM
   remote: https://rubygems.org/
