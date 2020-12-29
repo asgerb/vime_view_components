@@ -22,6 +22,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency "dry-types", "~> 1.4"
   spec.add_dependency "view_component", [">= 2.0.0", "< 3.0"]
 
+  spec.add_dependency "zeitwerk", "~> 2.4"
+
   spec.add_development_dependency "minitest", "~> 5.14"
   spec.add_development_dependency "minitest-reporters"
   spec.add_development_dependency "nokogiri"

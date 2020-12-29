@@ -4,65 +4,18 @@ require "dry-initializer"
 require "dry-types"
 require "rails"
 require "view_component"
-
-require "vime/component"
-
-require "vime/core/embed"
-require "vime/core/player"
-require "vime/core/playground"
-
-require "vime/providers/audio"
-require "vime/providers/dailymotion"
-require "vime/providers/dash"
-require "vime/providers/file"
-require "vime/providers/hls"
-require "vime/providers/video"
-require "vime/providers/vimeo"
-require "vime/providers/youtube"
-
-require "vime/ui/controls/caption_control"
-require "vime/ui/controls/control"
-require "vime/ui/controls/control_group"
-require "vime/ui/controls/control_spacer"
-require "vime/ui/controls/controls"
-require "vime/ui/controls/default_controls"
-require "vime/ui/controls/fullscreen_control"
-require "vime/ui/controls/mute_control"
-require "vime/ui/controls/pip_control"
-require "vime/ui/controls/playback_control"
-require "vime/ui/controls/scrubber_control"
-require "vime/ui/controls/settings_control"
-require "vime/ui/controls/volume_control"
-
-require "vime/ui/time/current_time"
-require "vime/ui/time/end_time"
-require "vime/ui/time/time"
-require "vime/ui/time/time_progress"
-
-require "vime/ui/settings/default_settings"
-require "vime/ui/settings/menu"
-require "vime/ui/settings/menu_item"
-require "vime/ui/settings/menu_radio"
-require "vime/ui/settings/menu_radio_group"
-require "vime/ui/settings/settings"
-require "vime/ui/settings/submenu"
-
-require "vime/ui/captions"
-require "vime/ui/click_to_play"
-require "vime/ui/dbl_click_fullscreen"
-require "vime/ui/default_ui"
-require "vime/ui/icon"
-require "vime/ui/icon_library"
-require "vime/ui/live_indicator"
-require "vime/ui/poster"
-require "vime/ui/scrim"
-require "vime/ui/skeleton"
-require "vime/ui/slider"
-require "vime/ui/spinner"
-require "vime/ui/tooltip"
-require "vime/ui/ui"
+require "zeitwerk"
 
 require "vime_view_components/version"
 
 module VimeViewComponents
+end
+
+module Vime
+end
+
+Zeitwerk::Loader.new.tap do |loader|
+  loader.push_dir("#{__dir__}/vime", namespace: Vime)
+  loader.setup
+  loader.eager_load
 end
