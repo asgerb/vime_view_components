@@ -9,5 +9,10 @@ module Vime
       assert_includes component, " controls=\"\" "
       assert_not_includes component, "controls=\"controls\""
     end
+
+    test "closing tag is always present" do
+      component = Providers::Vimeo.new(video_id: "12345").call
+      assert_includes component, "</vm-vimeo>"
+    end
   end
 end

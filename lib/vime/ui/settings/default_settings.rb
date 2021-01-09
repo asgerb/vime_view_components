@@ -9,7 +9,7 @@ module Vime
         option :pin, type: Types::String.enum("bottomLeft", "bottomRight", "topLeft", "topRight"), default: -> { "bottomRight" }
 
         def call
-          tag "vm-default-settings", process_attrs(dom_attrs)
+          content_tag "vm-default-settings", process_attrs(dom_attrs)
         end
 
         def dom_attrs

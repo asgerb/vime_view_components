@@ -13,7 +13,7 @@ module Vime
       option :video_id, type: Types::String
 
       def call
-        tag "vm-vimeo", process_attrs(dom_attrs)
+        content_tag "vm-vimeo", process_attrs(dom_attrs)
       end
 
       def dom_attrs

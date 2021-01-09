@@ -8,7 +8,7 @@ module Vime
       option :effect, type: Types::String.enum("none", "sheen"), default: -> { "sheen" }
 
       def call
-        tag "vm-skeleton", process_attrs(dom_attrs)
+        content_tag "vm-skeleton", process_attrs(dom_attrs)
       end
 
       def dom_attrs
