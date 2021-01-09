@@ -29,10 +29,22 @@ module Vime
 
     private
       def process_attrs(attrs)
-        attrs
-          .deep_transform_keys(&:to_s)
-          .deep_transform_keys(&:dasherize)
-          .reject { |_, v| v.nil? }
+        attrs.transform_keys(&:to_s)
+            .transform_keys(&:dasherize)
+            .reject { |_, v| v.nil? || v == false }
+      end
+
+      def content_tag(*args)
+        cleanup_attributes(super)
+      end
+
+      def tag(*args)
+        cleanup_attributes(super)
+      end
+
+      def cleanup_attributes(html)
+        html.gsub(/(\s.+?)="true"\s/, "\\1 ")
+            .gsub(/(#{ActionView::Helpers::TagHelper::BOOLEAN_ATTRIBUTES.to_a.map{ |i| "=\"#{i}\"" }.join("|")})/, "")
       end
   end
 end
