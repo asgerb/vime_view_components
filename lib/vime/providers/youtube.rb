@@ -11,7 +11,7 @@ module Vime
       option :video_id, type: Types::String
 
       def call
-        content_tag "vm-youtube", process_attrs(dom_attrs)
+        content_tag "vm-youtube", nil, process_attrs(dom_attrs)
       end
 
       def dom_attrs

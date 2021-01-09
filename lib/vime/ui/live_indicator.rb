@@ -6,7 +6,7 @@ module Vime
   module Ui
     class LiveIndicator < Component
       def call
-        content_tag "vm-live-indicator", process_attrs(dom_attrs)
+        content_tag "vm-live-indicator", nil, process_attrs(dom_attrs)
       end
     end
   end

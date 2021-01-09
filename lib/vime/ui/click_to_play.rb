@@ -8,7 +8,7 @@ module Vime
       option :use_on_mobile, type: Types::Bool, default: -> { false }
 
       def call
-        content_tag "vm-click-to-play", process_attrs(dom_attrs)
+        content_tag "vm-click-to-play", nil, process_attrs(dom_attrs)
       end
 
       def dom_attrs

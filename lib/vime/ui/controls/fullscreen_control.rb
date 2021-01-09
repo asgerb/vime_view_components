@@ -14,7 +14,7 @@ module Vime
         option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
 
         def call
-          content_tag "vm-fullscreen-control", process_attrs(dom_attrs)
+          content_tag "vm-fullscreen-control", nil, process_attrs(dom_attrs)
         end
 
         def dom_attrs

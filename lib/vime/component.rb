@@ -33,19 +33,5 @@ module Vime
             .transform_keys(&:dasherize)
             .reject { |_, v| v.nil? || v == false }
       end
-
-      def content_tag(*args)
-        cleanup_attributes(super)
-      end
-
-      def tag(*args)
-        cleanup_attributes(super)
-      end
-
-      def cleanup_attributes(html)
-        html.gsub(/(\s.+?)="true"\s/, "\\1=\"\" ")
-            .gsub(Regexp.new(ActionView::Helpers::TagHelper::BOOLEAN_ATTRIBUTES.to_a.map{ |i| "=\"(#{i})\"" }.join("|")), "=\"\"")
-            .html_safe
-      end
   end
 end

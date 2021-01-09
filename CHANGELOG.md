@@ -2,8 +2,7 @@
 
 ## Next
 
-- convert `attribute="true"` to `attribute=""`
-- simplify [BOOLEAN_ATTRIBUTES](https://github.com/rails/rails/blob/914caca2d31bd753f47f9168f2a375921d9e91cc/actionview/lib/action_view/helpers/tag_helper.rb#L16) from `controls="controls"` to `controls=""`
+- make sure that all tags have closing tag (otherwise Vime does not work properly)
 
 ## 5.0.0
 
