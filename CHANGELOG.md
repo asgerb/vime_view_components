@@ -2,7 +2,9 @@
 
 ## Next
 
-- make sure that all tags have closing tag (otherwise Vime does not work properly)
+## 5.0.1
+
+- Make sure that all tags have closing tag (otherwise Vime does not work properly)
 
 ## 5.0.0
 
