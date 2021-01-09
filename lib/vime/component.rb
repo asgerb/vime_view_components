@@ -45,6 +45,7 @@ module Vime
       def cleanup_attributes(html)
         html.gsub(/(\s.+?)="true"\s/, "\\1 ")
             .gsub(/(#{ActionView::Helpers::TagHelper::BOOLEAN_ATTRIBUTES.to_a.map{ |i| "=\"#{i}\"" }.join("|")})/, "")
+            .html_safe
       end
   end
 end
