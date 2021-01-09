@@ -8,7 +8,7 @@ module Vime
       option :name, type: Types::String, optional: true
 
       def call
-        tag "vm-icons", process_attrs(dom_attrs)
+        content_tag "vm-icons", nil, process_attrs(dom_attrs)
       end
 
       def dom_attrs

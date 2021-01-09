@@ -13,7 +13,7 @@ module Vime
         option :value, type: Types::String
 
         def call
-          tag "vm-menu-radio", process_attrs(dom_attrs)
+          content_tag "vm-menu-radio", nil, process_attrs(dom_attrs)
         end
 
         def dom_attrs

@@ -16,7 +16,7 @@ module Vime
       option :video_id, type: Types::String
 
       def call
-        tag "vm-dailymotion", process_attrs(dom_attrs)
+        content_tag "vm-dailymotion", nil, process_attrs(dom_attrs)
       end
 
       def dom_attrs

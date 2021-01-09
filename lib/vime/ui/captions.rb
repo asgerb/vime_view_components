@@ -9,7 +9,7 @@ module Vime
       option :hidden, type: Types::Bool, default: -> { false }
 
       def call
-        tag "vm-captions", process_attrs(dom_attrs)
+        content_tag "vm-captions", nil, process_attrs(dom_attrs)
       end
 
       def dom_attrs

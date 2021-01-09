@@ -13,7 +13,7 @@ module Vime
         option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
 
         def call
-          tag "vm-settings-control", process_attrs(dom_attrs)
+          content_tag "vm-settings-control", nil, process_attrs(dom_attrs)
         end
 
         def dom_attrs

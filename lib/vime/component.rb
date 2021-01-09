@@ -30,9 +30,9 @@ module Vime
     private
       def process_attrs(attrs)
         attrs
-          .deep_transform_keys(&:to_s)
-          .deep_transform_keys(&:dasherize)
-          .reject { |_, v| v.nil? }
+           .deep_transform_keys(&:to_s)
+           .deep_transform_keys(&:dasherize)
+           .reject { |_, v| v.nil? || v == false }
       end
   end
 end
