@@ -8,8 +8,8 @@ module Vime
       class PlaybackControl < Component
         option :hide_tooltip, type: Types::Bool, default: -> { false }
         option :keys, type: Types::String.optional, default: -> { "k" }
-        option :play_icon, type: Types::String, default: -> { "#vime-play" }
-        option :pause_icon, type: Types::String, default: -> { "#vime-pause" }
+        option :play_icon, type: Types::String, default: -> { "play" }
+        option :pause_icon, type: Types::String, default: -> { "pause" }
         option :tooltip_direction, type: Types::TooltipDirection, optional: true
         option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
 

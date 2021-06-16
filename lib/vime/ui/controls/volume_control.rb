@@ -7,10 +7,10 @@ module Vime
     module Controls
       class VolumeControl < Component
         option :hide_tooltip, type: Types::Bool, default: -> { false }
-        option :high_volume_icon, type: Types::String, default: -> { "#vime-volume-high" }
-        option :low_volume_icon, type: Types::String, default: -> { "#vime-volume-low" }
+        option :high_volume_icon, type: Types::String, default: -> { "volume-high" }
+        option :low_volume_icon, type: Types::String, default: -> { "volume-low" }
         option :mute_keys, type: Types::String, default: -> { "m" }
-        option :muted_icon, type: Types::String, default: -> { "#vime-volume-mute" }
+        option :muted_icon, type: Types::String, default: -> { "volume-mute" }
         option :no_keyboard, type: Types::Bool, default: -> { false }
         option :tooltip_direction, type: Types::TooltipDirection, optional: true
         option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }

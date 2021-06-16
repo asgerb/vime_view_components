@@ -6,8 +6,8 @@ module Vime
   module Ui
     module Controls
       class PipControl < Component
-        option :enter_icon, type: Types::String, default: -> { "#vime-enter-pip" }
-        option :exit_icon, type: Types::String, default: -> { "#vime-exit-pip" }
+        option :enter_icon, type: Types::String, default: -> { "enter-pip" }
+        option :exit_icon, type: Types::String, default: -> { "exit-pip" }
         option :hide_tooltip, type: Types::Bool, default: -> { false }
         option :keys, type: Types::String, default: -> { "p" }
         option :tooltip_direction, type: Types::TooltipDirection, optional: true
