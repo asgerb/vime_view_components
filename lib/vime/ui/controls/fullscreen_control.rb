@@ -6,8 +6,8 @@ module Vime
   module Ui
     module Controls
       class FullscreenControl < Component
-        option :enter_icon, type: Types::String, default: -> { "enter-fullscreen" }
-        option :exit_icon, type: Types::String, default: -> { "exit-fullscreen" }
+        option :enter_icon, type: Types::String, default: -> { "fullscreen-enter" }
+        option :exit_icon, type: Types::String, default: -> { "fullscreen-exit" }
         option :hide_tooltip, type: Types::Bool, default: -> { false }
         option :keys, type: Types::String, optional: true, default: -> { "f" }
         option :tooltip_direction, type: Types::TooltipDirection, optional: true

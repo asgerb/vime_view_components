@@ -7,7 +7,7 @@ module Vime
     module Controls
       class SettingsControl < Component
         option :expanded, type: Types::Bool, default: -> { false }
-        option :icon, type: Types::String, default: -> { "#vime-settings" }
+        option :icon, type: Types::String, default: -> { "settings" }
         option :menu, type: Types::String, optional: true
         option :tooltip_direction, type: Types::TooltipDirection, optional: true
         option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }

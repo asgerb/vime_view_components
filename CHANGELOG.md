@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0.3
+
+- Update icon defaults
+
 ## 5.0.2
 
 - Update `_icon` option defaults to match the latest VimeJS defaults
