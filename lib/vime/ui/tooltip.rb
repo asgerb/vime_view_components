@@ -5,10 +5,10 @@
 module Vime
   module Ui
     class Tooltip < Component
-      option :active, type: Types::Bool, default: -> { false }
+      option :active, type: Types::Bool, optional: true
       option :direction, type: Types::String.enum("left", "right"), optional: true
-      option :hidden, type: Types::Bool, default: -> { false }
-      option :position, type: Types::String.enum("top", "bottom"), default: -> { "top" }
+      option :hidden, type: Types::Bool, optional: true
+      option :position, type: Types::String.enum("top", "bottom"), optional: true
 
       def call
         content_tag "vm-tooltip", content, process_attrs(dom_attrs)

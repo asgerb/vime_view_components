@@ -7,7 +7,7 @@ module Vime
     module Controls
       class Control < Component
         option :expanded, type: Types::Bool, optional: true
-        option :hidden, type: Types::Bool, default: -> { false }
+        option :hidden, type: Types::Bool, optional: true
         option :identifier, type: Types::String, optional: true
         option :keys, type: Types::String, optional: true
         option :label, type: Types::String

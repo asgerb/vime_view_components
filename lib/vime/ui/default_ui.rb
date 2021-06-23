@@ -5,15 +5,15 @@
 module Vime
   module Ui
     class DefaultUi < Component
-      option :no_captions, type: Types::Bool, default: -> { false }
-      option :no_click_to_play, type: Types::Bool, default: -> { false }
-      option :no_controls, type: Types::Bool, default: -> { false }
-      option :no_dbl_click_fullscreen, type: Types::Bool, default: -> { false }
-      option :no_icons, type: Types::Bool, default: -> { false }
-      option :no_poster, type: Types::Bool, default: -> { false }
-      option :no_settings, type: Types::Bool, default: -> { false }
-      option :no_skeleton, type: Types::Bool, default: -> { false }
-      option :no_spinner, type: Types::Bool, default: -> { false }
+      option :no_captions, type: Types::Bool, optional: true
+      option :no_click_to_play, type: Types::Bool, optional: true
+      option :no_controls, type: Types::Bool, optional: true
+      option :no_dbl_click_fullscreen, type: Types::Bool, optional: true
+      option :no_icons, type: Types::Bool, optional: true
+      option :no_poster, type: Types::Bool, optional: true
+      option :no_settings, type: Types::Bool, optional: true
+      option :no_skeleton, type: Types::Bool, optional: true
+      option :no_spinner, type: Types::Bool, optional: true
 
       def call
         content_tag "vm-default-ui", content, process_attrs(dom_attrs)

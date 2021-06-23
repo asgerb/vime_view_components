@@ -6,12 +6,12 @@ module Vime
   module Ui
     module Controls
       class PlaybackControl < Component
-        option :hide_tooltip, type: Types::Bool, default: -> { false }
-        option :keys, type: Types::String.optional, default: -> { "k" }
-        option :play_icon, type: Types::String, default: -> { "play" }
-        option :pause_icon, type: Types::String, default: -> { "pause" }
+        option :hide_tooltip, type: Types::Bool, optional: true
+        option :keys, type: Types::String.optional, optional: true
+        option :play_icon, type: Types::String, optional: true
+        option :pause_icon, type: Types::String, optional: true
         option :tooltip_direction, type: Types::TooltipDirection, optional: true
-        option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
+        option :tooltip_position, type: Types::TooltipPosition, optional: true
 
         def call
           content_tag "vm-playback-control", nil, process_attrs(dom_attrs)

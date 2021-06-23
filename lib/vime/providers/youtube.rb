@@ -5,9 +5,9 @@
 module Vime
   module Providers
     class Youtube < Core::Embed
-      option :cookies, type: Types::Bool, default: -> { false }
+      option :cookies, type: Types::Bool, optional: true
       option :poster, type: Types::String, optional: true
-      option :show_fullscreen_control, type: Types::Bool, default: -> { true }
+      option :show_fullscreen_control, type: Types::Bool, optional: true
       option :video_id, type: Types::String
 
       def call

@@ -6,10 +6,10 @@ module Vime
   module Ui
     class Slider < Component
       option :label, type: Types::String, optional: true
-      option :max, type: Types::Integer, default: -> { 10 }
-      option :min, type: Types::Integer, default: -> { 0 }
-      option :step, type: Types::Integer, default: -> { 1 }
-      option :value, type: Types::Integer, default: -> { 5 }
+      option :max, type: Types::Integer, optional: true
+      option :min, type: Types::Integer, optional: true
+      option :step, type: Types::Integer, optional: true
+      option :value, type: Types::Integer, optional: true
       option :value_text, type: Types::String, optional: true
 
       def call

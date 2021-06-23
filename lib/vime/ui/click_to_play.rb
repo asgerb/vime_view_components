@@ -5,7 +5,7 @@
 module Vime
   module Ui
     class ClickToPlay < Component
-      option :use_on_mobile, type: Types::Bool, default: -> { false }
+      option :use_on_mobile, type: Types::Bool, optional: true
 
       def call
         content_tag "vm-click-to-play", nil, process_attrs(dom_attrs)

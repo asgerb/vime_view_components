@@ -6,17 +6,17 @@ module Vime
   module Ui
     module Controls
       class Controls < Component
-        option :active_duration, type: Types::Integer, default: -> { 2750 }
-        option :align, type: Types::String.enum("center", "end", "start"), default: -> { "center" }
-        option :direction, type: Types::String.enum("column", "row"), default: -> { "row" }
-        option :full_height, type: Types::Bool, default: -> { false }
-        option :full_width, type: Types::Bool, default: -> { false }
-        option :hidden, type: Types::Bool, default: -> { false }
-        option :hide_on_mouse_leave, type: Types::Bool, default: -> { false }
-        option :hide_when_paused, type: Types::Bool, default: -> { false }
-        option :justify, type: Types::String.enum("center", "end", "space-around", "space-between", "space-evenly", "start"), default: -> { "start" }
-        option :pin, type: Types::String.enum("bottomLeft", "bottomRight", "center", "topLeft", "topRight"), default: -> { "bottomLeft" }
-        option :wait_for_playback_start, type: Types::Bool, default: -> { false }
+        option :active_duration, type: Types::Integer, optional: true
+        option :align, type: Types::String.enum("center", "end", "start"), optional: true
+        option :direction, type: Types::String.enum("column", "row"), optional: true
+        option :full_height, type: Types::Bool, optional: true
+        option :full_width, type: Types::Bool, optional: true
+        option :hidden, type: Types::Bool, optional: true
+        option :hide_on_mouse_leave, type: Types::Bool, optional: true
+        option :hide_when_paused, type: Types::Bool, optional: true
+        option :justify, type: Types::String.enum("center", "end", "space-around", "space-between", "space-evenly", "start"), optional: true
+        option :pin, type: Types::String.enum("bottomLeft", "bottomRight", "center", "topLeft", "topRight"), optional: true
+        option :wait_for_playback_start, type: Types::Bool, optional: true
 
         def call
           content_tag "vm-controls", content, process_attrs(dom_attrs)

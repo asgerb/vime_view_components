@@ -7,8 +7,8 @@ module Vime
     module Settings
       class MenuRadio < Component
         option :badge, type: Types::String, optional: true
-        option :checked, type: Types::Bool, default: -> { false }
-        option :checked_icon, type: Types::String, default: -> { "checkmark" }
+        option :checked, type: Types::Bool, optional: true
+        option :checked_icon, type: Types::String, optional: true
         option :label, type: Types::String
         option :value, type: Types::String
 

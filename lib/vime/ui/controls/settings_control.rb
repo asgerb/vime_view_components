@@ -6,11 +6,11 @@ module Vime
   module Ui
     module Controls
       class SettingsControl < Component
-        option :expanded, type: Types::Bool, default: -> { false }
-        option :icon, type: Types::String, default: -> { "settings" }
+        option :expanded, type: Types::Bool, optional: true
+        option :icon, type: Types::String, optional: true
         option :menu, type: Types::String, optional: true
         option :tooltip_direction, type: Types::TooltipDirection, optional: true
-        option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
+        option :tooltip_position, type: Types::TooltipPosition, optional: true
 
         def call
           content_tag "vm-settings-control", nil, process_attrs(dom_attrs)

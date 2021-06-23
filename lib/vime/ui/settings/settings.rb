@@ -6,9 +6,9 @@ module Vime
   module Ui
     module Settings
       class Settings < Component
-        option :active, type: Types::Bool, default: -> { false }
-        option :controls_height, type: Types::Integer, default: -> { 0 }
-        option :pin, type: Types::String.enum("bottomLeft", "bottomRight", "topLeft", "topRight"), default: -> { "bottomRight" }
+        option :active, type: Types::Bool, optional: true
+        option :controls_height, type: Types::Integer, optional: true
+        option :pin, type: Types::String.enum("bottomLeft", "bottomRight", "topLeft", "topRight"), optional: true
 
         def call
           content_tag "vm-settings", content, process_attrs(dom_attrs)

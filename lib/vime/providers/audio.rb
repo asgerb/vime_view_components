@@ -7,7 +7,7 @@ module Vime
     class Audio < File
       option :cross_origin, type: Types::CrossOrigin, optional: true
       option :media_title, type: Types::String, optional: true
-      option :preload, type: Types::Preload, default: -> { "metadata" }
+      option :preload, type: Types::Preload, optional: true
 
       def call
         content_tag "vm-audio", content, process_attrs(dom_attrs)
