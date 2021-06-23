@@ -4,7 +4,7 @@
 
 module Vime
   module Providers
-    class Dailymotion < Embed
+    class Dailymotion < Core::Embed
       option :color, type: Types::String, optional: true
       option :poster, type: Types::String, optional: true
       option :should_autoplay_queue, type: Types::Bool, default: -> { false }

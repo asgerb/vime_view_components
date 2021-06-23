@@ -4,7 +4,7 @@
 
 module Vime
   module Providers
-    class Vimeo < Embed
+    class Vimeo < Vime::Core::Embed
       option :byline, type: Types::Bool, default: -> { true }
       option :color, type: Types::String, optional: true
       option :no_auto_aspect_ratio, type: Types::Bool, default: -> { false }
