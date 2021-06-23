@@ -6,7 +6,7 @@ module Vime
   module Ui
     module Time
       class EndTime < Component
-        option :always_show_hours, type: Types::Bool, default: -> { false }
+        option :always_show_hours, type: Types::Bool, optional: true
 
         def call
           content_tag "vm-end-time", nil, process_attrs(dom_attrs)

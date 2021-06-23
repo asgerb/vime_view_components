@@ -6,8 +6,8 @@ module Vime
   module Ui
     module Settings
       class Submenu < Component
-        option :active, type: Types::Bool, default: -> { false }
-        option :hidden, type: Types::Bool, default: -> { false }
+        option :active, type: Types::Bool, optional: true
+        option :hidden, type: Types::Bool, optional: true
         option :hint, type: Types::String, optional: true
         option :label, type: Types::String
 

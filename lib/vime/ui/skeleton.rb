@@ -5,7 +5,7 @@
 module Vime
   module Ui
     class Skeleton < Component
-      option :effect, type: Types::String.enum("none", "sheen"), default: -> { "sheen" }
+      option :effect, type: Types::String.enum("none", "sheen"), optional: true
 
       def call
         content_tag "vm-skeleton", nil, process_attrs(dom_attrs)

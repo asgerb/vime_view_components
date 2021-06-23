@@ -6,9 +6,9 @@ module Vime
   module Ui
     module Time
       class Time < Component
-        option :always_show_hours, type: Types::Bool, default: -> { false }
+        option :always_show_hours, type: Types::Bool, optional: true
         option :label, type: Types::String
-        option :seconds, type: Types::Integer, default: -> { 0 }
+        option :seconds, type: Types::Integer, optional: true
 
         def call
           content_tag "vm-time", nil, process_attrs(dom_attrs)

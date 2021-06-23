@@ -8,9 +8,9 @@ module Vime
       class MenuItem < Component
         option :badge, type: Types::String, optional: true
         option :checked, type: Types::Bool, optional: true
-        option :checked_icon, type: Types::String, default: -> { "checkmark" }
+        option :checked_icon, type: Types::String, optional: true
         option :expanded, type: Types::Bool, optional: true
-        option :hidden, type: Types::Bool, default: -> { false }
+        option :hidden, type: Types::Bool, optional: true
         option :hint, type: Types::String, optional: true
         option :identifier, type: Types::String, optional: true
         option :label, type: Types::String

@@ -6,10 +6,10 @@ module Vime
   module Ui
     module Controls
       class DefaultControls < Component
-        option :active_duration, type: Types::Integer, default: -> { 2750 }
-        option :hide_on_mouse_leave, type: Types::Bool, default: -> { false }
-        option :hide_when_paused, type: Types::Bool, default: -> { false }
-        option :wait_for_playback_start, type: Types::Bool, default: -> { false }
+        option :active_duration, type: Types::Integer, optional: true
+        option :hide_on_mouse_leave, type: Types::Bool, optional: true
+        option :hide_when_paused, type: Types::Bool, optional: true
+        option :wait_for_playback_start, type: Types::Bool, optional: true
 
         def call
           content_tag "vm-default-controls", nil, process_attrs(dom_attrs)

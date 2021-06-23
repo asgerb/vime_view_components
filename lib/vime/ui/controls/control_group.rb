@@ -6,7 +6,7 @@ module Vime
   module Ui
     module Controls
       class ControlGroup < Component
-        option :space, type: Types::String.enum("both", "bottom", "none", "top"), default: -> { "none" }
+        option :space, type: Types::String.enum("both", "bottom", "none", "top"), optional: true
 
         def call
           content_tag "vm-control-group", content, process_attrs(dom_attrs)

@@ -12,7 +12,7 @@ module Vime
       option :disable_remote_playback, type: Types::Bool, optional: true
       option :media_title, type: Types::String, optional: true
       option :poster, type: Types::String, optional: true
-      option :preload, type: Types::Preload, default: -> { "metadata" }
+      option :preload, type: Types::Preload, optional: true
       option :view_type, type: Types::String, optional: true
 
       def call

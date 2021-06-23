@@ -7,11 +7,11 @@ module Vime
     class Dailymotion < Core::Embed
       option :color, type: Types::String, optional: true
       option :poster, type: Types::String, optional: true
-      option :should_autoplay_queue, type: Types::Bool, default: -> { false }
-      option :show_dailymotion_logo, type: Types::Bool, default: -> { false }
-      option :show_share_buttons, type: Types::Bool, default: -> { false }
-      option :show_up_next_queue, type: Types::Bool, default: -> { false }
-      option :show_video_info, type: Types::Bool, default: -> { true }
+      option :should_autoplay_queue, type: Types::Bool, optional: true
+      option :show_dailymotion_logo, type: Types::Bool, optional: true
+      option :show_share_buttons, type: Types::Bool, optional: true
+      option :show_up_next_queue, type: Types::Bool, optional: true
+      option :show_video_info, type: Types::Bool, optional: true
       option :syndication, type: Types::String, optional: true
       option :video_id, type: Types::String
 

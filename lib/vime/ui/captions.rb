@@ -5,8 +5,7 @@
 module Vime
   module Ui
     class Captions < Component
-      option :controls_height, type: Types::Integer, default: -> { 0 }
-      option :hidden, type: Types::Bool, default: -> { false }
+      option :hidden, type: Types::Bool, optional: true
 
       def call
         content_tag "vm-captions", nil, process_attrs(dom_attrs)
@@ -14,7 +13,6 @@ module Vime
 
       def dom_attrs
         super.merge({
-          controls_height: controls_height,
           hidden: hidden,
         })
       end

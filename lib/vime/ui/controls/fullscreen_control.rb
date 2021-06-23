@@ -6,12 +6,12 @@ module Vime
   module Ui
     module Controls
       class FullscreenControl < Component
-        option :enter_icon, type: Types::String, default: -> { "fullscreen-enter" }
-        option :exit_icon, type: Types::String, default: -> { "fullscreen-exit" }
-        option :hide_tooltip, type: Types::Bool, default: -> { false }
-        option :keys, type: Types::String, optional: true, default: -> { "f" }
+        option :enter_icon, type: Types::String, optional: true
+        option :exit_icon, type: Types::String, optional: true
+        option :hide_tooltip, type: Types::Bool, optional: true
+        option :keys, type: Types::String, optional: true, optional: true
         option :tooltip_direction, type: Types::TooltipDirection, optional: true
-        option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
+        option :tooltip_position, type: Types::TooltipPosition, optional: true
 
         def call
           content_tag "vm-fullscreen-control", nil, process_attrs(dom_attrs)
