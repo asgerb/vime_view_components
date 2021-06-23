@@ -4,7 +4,7 @@
 
 module Vime
   module Providers
-    class Hls < Component
+    class Hls < Video
       option :config, type: Types::Any, optional: true
       option :controls_list, type: Types::String, optional: true
       option :cross_origin, type: Types::CrossOrigin, optional: true

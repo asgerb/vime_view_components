@@ -4,7 +4,7 @@
 
 module Vime
   module Providers
-    class Dash < Component
+    class Dash < Video
       option :auto_pip, type: Types::Bool, optional: true
       option :controls_list, type: Types::String, optional: true
       option :cross_origin, type: Types::CrossOrigin, optional: true
