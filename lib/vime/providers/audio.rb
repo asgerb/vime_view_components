@@ -4,7 +4,7 @@
 
 module Vime
   module Providers
-    class Audio < Component
+    class Audio < File
       option :cross_origin, type: Types::CrossOrigin, optional: true
       option :media_title, type: Types::String, optional: true
       option :preload, type: Types::Preload, default: -> { "metadata" }

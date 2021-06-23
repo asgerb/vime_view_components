@@ -4,7 +4,7 @@
 
 module Vime
   module Providers
-    class Video < Component
+    class Video < File
       option :controls_list, type: Types::String, optional: true
       option :cross_origin, type: Types::CrossOrigin, optional: true
       option :media_title, type: Types::String, optional: true
