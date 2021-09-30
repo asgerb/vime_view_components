@@ -5,10 +5,10 @@
 module Vime
   module Providers
     class Vimeo < Vime::Core::Embed
-      option :byline, type: Types::Bool, default: -> { true }
+      option :byline, type: Types::Bool, optional: true
       option :color, type: Types::String, optional: true
-      option :no_auto_aspect_ratio, type: Types::Bool, default: -> { false }
-      option :portrait, type: Types::Bool, default: -> { true }
+      option :no_auto_aspect_ratio, type: Types::Bool, optional: true
+      option :portrait, type: Types::Bool, optional: true
       option :poster, type: Types::String, optional: true
       option :video_id, type: Types::String
 

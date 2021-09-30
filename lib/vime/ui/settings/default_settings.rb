@@ -6,7 +6,7 @@ module Vime
   module Ui
     module Settings
       class DefaultSettings < Component
-        option :pin, type: Types::String.enum("bottomLeft", "bottomRight", "topLeft", "topRight"), default: -> { "bottomRight" }
+        option :pin, type: Types::String.enum("bottomLeft", "bottomRight", "topLeft", "topRight"), optional: true
 
         def call
           content_tag "vm-default-settings", nil, process_attrs(dom_attrs)

@@ -10,8 +10,8 @@ module Vime
       option :cross_origin, type: Types::CrossOrigin, optional: true
       option :media_title, type: Types::String, optional: true
       option :poster, type: Types::String, optional: true
-      option :preload, type: Types::Preload, default: -> { "metadata" }
-      option :version, type: Types::String, default: -> { "latest" }
+      option :preload, type: Types::Preload, optional: true
+      option :version, type: Types::String, optional: true
 
       def call
         content_tag "vm-hls", content, process_attrs(dom_attrs)

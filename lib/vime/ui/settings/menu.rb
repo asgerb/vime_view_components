@@ -6,7 +6,7 @@ module Vime
   module Ui
     module Settings
       class Menu < Component
-        option :active, type: Types::Bool, default: -> { false }
+        option :active, type: Types::Bool, optional: true
         option :controller, type: Types::String
         option :identifier, type: Types::String
 

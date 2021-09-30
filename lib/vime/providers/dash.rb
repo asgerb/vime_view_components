@@ -12,9 +12,9 @@ module Vime
       option :disable_remote_playback, type: Types::Bool, optional: true
       option :media_title, type: Types::String, optional: true
       option :poster, type: Types::String, optional: true
-      option :preload, type: Types::Preload, default: -> { "metadata" }
+      option :preload, type: Types::Preload, optional: true
       option :src, type: Types::String
-      option :version, type: Types::String, default: -> { "latest" }
+      option :version, type: Types::String, optional: true
 
       def call
         content_tag "vm-dash", content, process_attrs(dom_attrs)

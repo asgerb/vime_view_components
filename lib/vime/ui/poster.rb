@@ -5,7 +5,7 @@
 module Vime
   module Ui
     class Poster < Component
-      option :fit, type: Types::String.enum("contain", "cover", "fill", "none", "scale-down"), default: -> { "cover" }
+      option :fit, type: Types::String.enum("contain", "cover", "fill", "none", "scale-down"), optional: true
 
       def call
         content_tag "vm-poster", nil, process_attrs(dom_attrs)

@@ -6,9 +6,9 @@ module Vime
   module Ui
     module Controls
       class ScrubberControl < Component
-        option :always_show_hours, type: Types::Bool, default: -> { false }
-        option :hide_tooltip, type: Types::Bool, default: -> { false }
-        option :no_keyboard, type: Types::Bool, default: -> { false }
+        option :always_show_hours, type: Types::Bool, optional: true
+        option :hide_tooltip, type: Types::Bool, optional: true
+        option :no_keyboard, type: Types::Bool, optional: true
 
         def call
           content_tag "vm-scrubber-control", nil, process_attrs(dom_attrs)

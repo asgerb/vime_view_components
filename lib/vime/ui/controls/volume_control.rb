@@ -6,14 +6,14 @@ module Vime
   module Ui
     module Controls
       class VolumeControl < Component
-        option :hide_tooltip, type: Types::Bool, default: -> { false }
-        option :high_volume_icon, type: Types::String, default: -> { "volume-high" }
-        option :low_volume_icon, type: Types::String, default: -> { "volume-low" }
-        option :mute_keys, type: Types::String, default: -> { "m" }
-        option :muted_icon, type: Types::String, default: -> { "volume-mute" }
-        option :no_keyboard, type: Types::Bool, default: -> { false }
+        option :hide_tooltip, type: Types::Bool, optional: true
+        option :high_volume_icon, type: Types::String, optional: true
+        option :low_volume_icon, type: Types::String, optional: true
+        option :mute_keys, type: Types::String, optional: true
+        option :muted_icon, type: Types::String, optional: true
+        option :no_keyboard, type: Types::Bool, optional: true
         option :tooltip_direction, type: Types::TooltipDirection, optional: true
-        option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
+        option :tooltip_position, type: Types::TooltipPosition, optional: true
 
         def call
           content_tag "vm-volume-control", nil, process_attrs(dom_attrs)

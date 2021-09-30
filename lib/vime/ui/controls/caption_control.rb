@@ -6,12 +6,12 @@ module Vime
   module Ui
     module Controls
       class CaptionControl < Component
-        option :hide_icon, type: Types::String, default: -> { "captions-off" }
-        option :hide_tooltip, type: Types::Bool, default: -> { false }
-        option :keys, type: Types::String, default: -> { "c" }
-        option :show_icon, type: Types::String, default: -> { "captions-on" }
+        option :hide_icon, type: Types::String, optional: true
+        option :hide_tooltip, type: Types::Bool, optional: true
+        option :keys, type: Types::String, optional: true
+        option :show_icon, type: Types::String, optional: true
         option :tooltip_direction, type: Types::TooltipDirection, optional: true
-        option :tooltip_position, type: Types::TooltipPosition, default: -> { "top" }
+        option :tooltip_position, type: Types::TooltipPosition, optional: true
 
         def call
           content_tag "vm-caption-control", nil, process_attrs(dom_attrs)
