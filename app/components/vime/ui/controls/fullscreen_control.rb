@@ -9,7 +9,7 @@ module Vime
         option :enter_icon, type: Types::String, optional: true
         option :exit_icon, type: Types::String, optional: true
         option :hide_tooltip, type: Types::Bool, optional: true
-        option :keys, type: Types::String, optional: true, optional: true
+        option :keys, type: Types::String, optional: true
         option :tooltip_direction, type: Types::TooltipDirection, optional: true
         option :tooltip_position, type: Types::TooltipPosition, optional: true
 
