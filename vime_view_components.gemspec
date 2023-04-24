@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "dry-initializer", "~> 3.0"
   spec.add_dependency "dry-types", "~> 1.4"
-  spec.add_dependency "view_component", [">= 2.0.0", "< 3.0"]
+  spec.add_dependency "view_component", [">= 2.0.0", "< 4.0"]
 
   spec.add_dependency "zeitwerk", "~> 2.4"
 
