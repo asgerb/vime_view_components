@@ -5,9 +5,9 @@
 ## 5.1.0
 
 - Fixed inheritance of providers components
-– Convert to Rails Engine
-– Upgrade to Ruby 3.2.2
-– Upgrade to support View Component 3
+- Convert to Rails Engine
+- Upgrade to Ruby 3.2.2
+- Upgrade to support View Component 3
 
 ## 5.0.3
 
